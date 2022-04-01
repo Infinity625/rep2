@@ -1,0 +1,366 @@
+<!doctype html>
+<html>
+
+    <head>
+         <!-- Metadados -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+         <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="form.css" media="screen">
+
+        <title>Pesquisa</title>
+    </head>
+
+    <body>
+        <body>
+            <style>
+                /* Todos os elementos da página */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Elementos com o ID "titulo" */
+#titulo {
+    font-family: sans-serif;
+    color: #380B61;
+    margin-left: 7%;
+} 
+
+
+#check{
+    display: inline-block;
+}
+
+/* Elementos de tag <fieldset>*/
+fieldset {
+    border: 0;
+}
+
+/* Elemento de tag <body> */
+body{
+    background-color: #F0F8FF;
+    font-family: sans-serif;
+    font-size: 1em;
+    color: #59429d;
+    margin-left: 36%;
+    margin-top: 2%;
+    justify-content: center;
+}
+
+/* Elementos de tags <body>, <input>, <Select>, <textarea> e <button> */
+input, select, textarea, button {
+    font-family: sans-serif;
+    font-size: 1em;
+    color: #59429d;
+    border-radius: 5px;
+}
+
+/* Elementos de classe "grupo" nos estados das pseudoclasses "before" e "after" */
+.grupo:before, .grupo:after {
+    display: table;
+}
+
+/* Elementos de classe "grupo" no estado da pseudoclasse "after" */
+.grupo:after {
+    clear: both;
+}
+
+/* Elementos de classe "campo" */
+.campo {
+    margin-bottom: 1em;
+}
+
+/* Elementos de classe "campo" de tag <label> */
+.campo label {
+    margin-bottom: 0.2em;
+    color: #59429d;
+    display: block;
+}
+
+/* Elementos de classe "campo" ou "grupo" de tag <fieldset> */
+fieldset.grupo .campo {
+    float:  left;
+    margin-right: 1em;
+}
+
+
+
+/* Elementos de classe "campo" de tag <select> e <option>*/
+.campo select option {
+    padding-right: 1em;
+}
+
+/* Elemento de classe "campo" com tag <input>, <select> e <textarea> tocas com estado da pseudoclasse "focus"*/
+.campo input:focus, .campo select:focus, .campo textarea:focus {
+    background: #E0E0F8;
+}
+
+/* Elemento de classe "botao" */
+.botao {
+    font-size: 1.2em;
+    background: #59429d;
+    border: 0;
+    margin-bottom: 1em;
+    color: #ffffff;
+    padding: 0.2em 0.6em;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+/* Elemento de classe "botao" com o estado da pseudoclasse "hover" */
+.botao:hover {
+    background: #CCBBFF;
+    box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
+    text-shadow: none;
+}
+
+/* Elemento de classe "botao" com o estado da pseudoclasse "hover" */
+.botao:hover {
+    background: #CCBBFF;
+    box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
+    text-shadow: none;
+}
+
+/* Elementos de classe botão e de tag <select> */
+.botao, select{
+    cursor: pointer;
+}
+            </style>
+        </body>  
+
+        <!-- Cabeçalho com título e subtítulo (ambos com css de id "titulo") -->
+        <div>
+          <h1 id="titulo"> Página de Pesquisa Infinity</h1>
+            <p id="subtitulo">Complete suas informações:</p>
+          <br>
+        </div>
+
+        <!-- Início do formulário -->
+        <form action="/add" method="POST">
+
+      
+           <div class="campo">
+              
+                <label><strong>Qual é a sua faixa étaria?</strong></label>
+                <label>
+                    <input type="radio"  id="idade"  name="faixaEtaria" value="18 a 24">  18 a 24
+                </label>
+                <label>
+                    <input type="radio" id="idade" name="faixaEtaria" value="25 a 34">  25 a 34
+                </label>
+              <label>
+                    <input type="radio" id="idade" name="faixaEtaria" value="maiorde35">  Maior de 35
+                </label>
+            </div>
+<!--Campo de Idade com 3 opções de botões selecionáveis (radio button) e css de classe "campo"-->
+           
+                      <!-- Campo do perfil com 4 opções de botões selecionáveis (radio button) e css de classe "campo" -->
+                      <div class="campo">
+              
+                        <label><strong>Qual seu perfil de Investidor?</strong></label>
+                        <label>
+                            <input type="radio" id="perfil" name="perfilInvestidor" value="agressivo" checked> Agressivo
+                        </label>
+                        <label>
+                            <input type="radio" id="nome"  name="perfilInvestidor" value="conservador"> Conservador
+                        </label>
+                      <label>
+                            <input type="radio" id="perfil" name="perfilInvestidor" value="ambos"> Ambos
+                        </label><label>
+                            <input type="radio" id="perfil" name="perfil" value="indefinido"> Indefinido
+                        </label>
+                    </div>
+                    
+                              <!-- Campo da Operaçao com 4 opções de botões selecionáveis (radio button) e css de classe "campo" -->
+            <div class="campo">
+              
+                <label><strong>Qual è o seu mètodo de Operação?</strong></label>
+                <label>
+                    <input type="radio" id="metodo" name="metodoDeOperacao" value="All in" checked> All in
+                </label>
+                <label>
+                    <input type="radio" id="metodo" name="metodoDeOperacao" value="gestao"> Gestão
+                </label>
+              <label>
+                    <input type="radio" id="metodo" name="metodoDeOperacao" value="ambos"> Ambos
+                </label><label>
+                    <input type="radio" name="metodo" value="metodoDeOperacao" value="indefinido"> Indefinido
+                </label>
+            </div> 
+            
+                      <!-- Campo da Nota com  4 opções de botões selecionáveis (radio button) e css de classe "campo" -->
+                      <div class="campo">
+              
+                        <label><strong>De 0 à 10 como você avalia seu comportamento emocional durante suas Operações?</strong></label>
+                        <label>
+                            <input type="radio" id="nota" name="comportamentoEmocional" value="zero" checked> zero
+                        </label>
+                        <label>
+                            <input type="radio" id="nota" name="comportamentoEmocional" value="entre 1 e 3"> entre 1 e 3
+                        </label>
+                      <label>
+                            <input type="radio" id="nota" name="comportamentoEmocional" value="entre 5 e 7"> entre 5 e 7
+                        </label><label>
+                            <input type="radio"id="nota" name="comportamentoEmocional" value="acima de 8"> acima de 8
+                        </label>
+                    </div>         
+          
+  
+          
+
+            <!-- Campo de avaliacao da plataforma com 3 opções de botões selecionáveis (radio button) e css de classe "campo" -->
+            <div class="campo">
+              
+                <label><strong>Como você avalia nossa empresa?</strong></label>
+                <label>
+                    <input type="radio" id="avaliacao"name="avaliacaoDaEmpresa" value="excelente" checked> Excelente
+                </label>
+                <label>
+                    <input type="radio" id="avaliacao" name="avaliacaoDaEmpresa" value="bom"> Bom
+                </label>
+                <label>
+                    <input type="radio" id="avalia"  name="avaliacaoDaEmpresa" value="regular"> Regular
+                </label>
+              <label>
+                    <input type="radio" id="avaliacao"  name="avaliacaoDaEmpresa" value="ruim"> Ruim
+                </label><label>
+                    <input type="radio" id="avaliacao"  name="avaliacaoDaEmpresa" value="pessimo"> Péssimo
+                </label>
+            </div>
+          
+   <!-- Campo da Motivaçâo com 3 opções de botões selecionáveis (radio button) e css de classe "campo"-->
+            <div class="campo">
+
+            <label><strong>Qual foi sua maior motivação em ser nosso cliente?</strong></label>
+                <label>
+                    <input type="radio" id="motivacao"  name="motivacaoDoCliente" value="segurança" checked> Segurança
+                </label>
+                <label>
+                    <input type="radio" id="motivacao"  name="motivacaoDoCliente" value="praticidade"> Praticidade
+                </label>
+                <label>
+                   
+                    <input type="radio" id="motivacao"  name="motivacaoDoCliente" value="Otimização de recursos> Otimização de Rercursos
+                </label>
+                 <input type="radio" name="motivacaoDoCliente"  value="todas as anteriores"> Todas às anteriores
+                </label>
+            </div>
+      
+ 
+         <!-- Campo de indicacao de novo membro com 2 opções para escolha (select option) e css de classe "campo" -->
+     
+            <div class="campo">
+                <label for="conhecimentoCripto"><strong>Você jâ conhecia o mercado de criptoativos?</strong></label>
+                <select name="conhecimentoCripto" required>
+                  <option selected disabled">Selecione</option>
+                  <option value="sim">Sim</option>
+                  <option value="nao">Não</option>
+                </select>
+            </div>
+   
+
+      <!-- Campo da Carteira de criptoativos com 2 opções para escolha (select option) e css de classe "campo" -->
+  <div class="campo">
+                <label for="multiCarteiraCripto""><strong>Você possui uma carteira diversificada de criptoativos?</strong></label>
+                <select name="multiCarteiraCripto" required>
+                  <option selected disabled >Selecione</option>
+                  <option value="sim">Sim</option>
+                  <option value="nao">Não</option>
+                </select>
+            </div>
+   
+      <!-- Campo Multi Carteiras com 3 opções para escolha (select option) e css de classe "campo" -->
+      <div class="campo">
+                <label for="participarDoCurso"><strong>Quantos ativos você possui atualmente?</strong></label>
+                <select name="participarDoCurso" required>
+                  <option selected disabled>Selecione</option>
+                  <option value ="acima de 5">acima de 5</option>
+                  <option value= "de 6 a 10">de 6 a 10</option>
+                  <option value= "acimda de 10">acimda de 10</option>
+                </select>
+            </div>
+    
+      <Campo do Cursoo com 2 opções para escolha (select option) e css de classe "campo">
+      <div class="campo">
+        <label for="participarDoCurso"><strong>Você teria interesse em participar do nosso curso?</strong></label>
+        <select name="participarDoCurso" required>
+          <option selected disabled>Selecione</option>
+          <option value ="sim">Sim</option>
+          <option value = "não">Não</option>
+      
+        </select>
+    </div>
+            <!-- Campo de indicacao de novo membro com 2 opções para escolha (select option) e css de classe "campo" -->
+            <div class="campo">
+                <label for="plataforma"><strong>Você indicaria algum amigo seu a nossa gestora?</strong></label>
+                <select name="plataforma" required>
+                  <option selected disabled >Selecione</option>
+                  <option>Sim</option>
+                  <option>Não</option>
+                </select>
+            </div>
+
+            <fieldset class="grupo">
+              
+              
+                <!-- Campo de midias socias para escolha de 1 ou mais opções para marcar (checkbox) e css de classe "campo" -->
+               <fieldset class="grupo">
+                <div id="check">
+                    <label><strong> Como você conheceu nossa empresa? </strong></label><br><br>
+                    <input type="checkbox" id="tech" name="midiasSocias" value="facebook>
+                    <label for="tecnologia1"> Facebook</label>
+                    <input type="checkbox" id="tech" name="midiasSocias" value="google">
+                    <label for="tecnologia2">Google</label>
+                    <input type="checkbox" id="tech" name="midiasSocias" value="instagram">
+                    <label for="tecnologia3">Instagram</label>
+                    <input type="checkbox" id="tech" name="midiasSocias" value="por um amigo">
+                    <label for="amigo"> Por um amigo</label>
+                    <input type="checkbox" id="tech" name="midiasSocias" value="outro">
+                    <label for="outros">Outro</label>
+                </div>
+            </fieldset>
+              <br>
+          
+<!-- Botão para enviar o formulário -->
+          
+                  <fieldset class="grupo">
+                <!-- Campo do nome com legenda "nome" e css de classe "campo" -->
+                <div class="campo">
+                    <label for="nome"><strong>Nome:</strong></label>
+                    <input type="text" name="nome" id="nome" required>
+                </div>
+
+                <!-- Campo do sobrenome com legenda "sobrenome" e css de classe "campo" -->
+                <div class="campo">
+                    <label for="sobrenome"><strong>Sobrenome:</strong></label>
+                    <input type="text" name="sobrenome" id="sobrenome" required>
+                </div>
+            </fieldset> 
+
+            <!-- Campo de email com-->
+            <div class="campo">
+                <label for="email"><strong>Email:</strong></label>
+                <input type="email" name="email" id="email" required>
+            </div>
+              <br>
+              
+              <!-- Botao de submit -->
+    <p>Conteudo</p>
+    <textarea name="conteudo" id="send" cols="30" rows="10"></textarea>
+    <button type="submit">Enviar</button>
+
+
+        <script type="text/javascript" src="js/index.js"></script>
+              
+        </form>
+
+    </body>
+
+</html>

@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+
+    <head>
+         <!-- Metadados -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+         <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="form.css" media="screen">
+
+        <title>Pesquisa</title>
+    </head>
+
+    <body>
+        <body>
+  
+            </style>
+        </body>  
+
+        
+        <!-- Início do formulário -->
+        <form action="/add" method="POST">
+
+        
+
+            <label><strong>Qual é a sua faixa étaria?</strong></label>
+            <label>
+                <input type="radio"  id="idade"  name="faixaEtaria" value="18 a 24">  18 a 24
+            </label>
+            <label>
+                <input type="radio" id="idade" name="faixaEtaria" value="25 a 34">  25 a 34
+            </label>
+          <label>
+                <input type="radio" id="idade" name="faixaEtaria" value="maior de 35">  Maior de 35
+            </label>
+
+       
+            <fieldset class="grupo">
+                <div id="check">
+                    <label><strong> Como você conheceu nossa empresa? </strong></label><br><br>
+                    <input type="checkbox" id="tech" name="midiasSocias" value="1">
+                    <label for="tecnologia1"> Facebook</label>
+                    <input type="checkbox" id="tech" name="midiasSocias" value="2">
+                    <label for="tecnologia2">Google</label>
+                    <input type="checkbox" id="tech" name="midiasSocias" value="3">
+                    <label for="tecnologia3">Instagram</label>
+                    <input type="checkbox" id="tech" name="midiasSocias" value="4">
+                    <label for="amigo"> Por um amigo</label>
+                    <input type="checkbox" id="tech" name="midiasSocias" value="5">
+                    <label for="outros">Outro</label>
+                </div>
+            </fieldset>
+              <br>
+      
+              <div class="campo">
+                <label for="participarDoCurso"><strong>Você teria interesse em participar do nosso curso?</strong></label>
+                <select name="participarDoCurso" required>
+                  <option selected disabled">Selecione</option>
+                  <option value ="Sim">Sim</option>
+                  <option value = "Não">Não</option>
+                  
+
+
+                </select>
+            </div>
+   
+           <div class="campo">
+              
+           
+                 <!-- Botao de submit -->
+             <p>Conteudo</p>
+                 <input name="nome" id="send" cols="30" rows="10"></textarea>
+                     <button type="submit">Enviar</button>
+
+
+            
+
+        </form>
+
+    </body>
+
+</html>
