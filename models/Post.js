@@ -30,7 +30,7 @@ const Post = db.sequelize.define('usuarios',{
     },
 })
 
-Post.sync({force:true})
+//Post.sync({force:true})
 
 // Permite o acesso ao model/Post através de outros arquivos
 module.exports = Post

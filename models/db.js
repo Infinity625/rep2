@@ -1,7 +1,7 @@
 
 // Conexão com o Banco de Dados
 const Sequelize = require('sequelize')
-const sequelize = new Sequelize('investidores', 'root','Root', {
+const sequelize = new Sequelize('infinity', 'raiz','12345', {
     host:"localhost",
     dialect: 'mysql'
 })
